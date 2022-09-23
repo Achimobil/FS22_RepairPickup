@@ -75,19 +75,32 @@
     <lights>
         <states>
             <state lightTypes="0"/>
+            <state lightTypes="0 1"/>
         </states>
         <sharedLight linkNode="plateNumberLight01_01" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
         <sharedLight linkNode="plateNumberLight01_02" filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml"/>
+        <sharedLight linkNode="innerLightLeft" filename="$data/shared/assets/lights/lizard/sideMarker20White.xml" lightTypes="1" />
+        <sharedLight linkNode="innerLightRight" filename="$data/shared/assets/lights/lizard/sideMarker20White.xml" lightTypes="1" />
+        <sharedLight linkNode="backLightLeft" filename="$data/shared/assets/lights/lizard/rearLight24.xml" lightTypes="1" />
+        <sharedLight linkNode="backLightRight" filename="$data/shared/assets/lights/lizard/rearLight24.xml" lightTypes="1" />
         <realLights>
             <low>
                 <light node="frontLightLow" lightTypes="0" excludedLightTypes="3"/>
                 <light node="highBeamLow" lightTypes="3"/>
+                <light node="innerLightLeft1" lightTypes="1"/>
+                <light node="innerLightRight1" lightTypes="1"/>
+                <light node="backLightLeft1" lightTypes="1"/>
+                <light node="backLightRight1" lightTypes="1"/>
             </low>
             <high>
                 <light node="frontLightHigh" lightTypes="0 3" excludedLightTypes="3"/>
                 <light node="licensePlateLightHigh" lightTypes="0"/>
                 <light node="backLightsHigh" lightTypes="0"/>
                 <light node="highBeamHigh" lightTypes="3"/>
+                <light node="innerLightLeft1" lightTypes="1"/>
+                <light node="innerLightRight1" lightTypes="1"/>
+                <light node="backLightLeft1" lightTypes="1"/>
+                <light node="backLightRight1" lightTypes="1"/>
                 <brakeLight node="backLightsHigh"/>
                 <turnLightLeft node="turnLightLeftFront"/>
                 <turnLightRight node="turnLightRightFront"/>
@@ -483,5 +496,13 @@
         <i3dMapping id="display_decals" node="0>0|13|1"/>
         <i3dMapping id="dashboard_decals" node="0>0|13|2"/>
         <i3dMapping id="HeckAchse" node="0>3|0|2"/>
+        <i3dMapping id="innerLightLeft" node="0>3|0|3|0|0"/>
+        <i3dMapping id="innerLightRight" node="0>3|0|3|0|1"/>
+        <i3dMapping id="backLightLeft" node="0>3|0|2|0|0|0|0"/>
+        <i3dMapping id="backLightRight" node="0>3|0|2|0|0|0|1"/>
+        <i3dMapping id="backLightLeft1" node="0>3|0|2|0|0|0|0|0"/>
+        <i3dMapping id="backLightRight1" node="0>3|0|2|0|0|0|1|0"/>
+        <i3dMapping id="innerLightLeft1" node="0>3|0|3|0|0|0"/>
+        <i3dMapping id="innerLightRight1" node="0>3|0|3|0|1|0"/>
     </i3dMappings>
 </vehicle>
