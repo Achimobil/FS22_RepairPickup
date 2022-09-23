@@ -28,7 +28,7 @@
     </storeData>
     <base>
         <typeDesc>$l10n_typeDesc_car</typeDesc>
-        <filename>pickup2017.i3d</filename>
+        <filename>models/pickup2017.i3d</filename>
         <sounds filename="$data/vehicles/lizard/pickup2017/sounds/pickup2017.xml"/>
         <size width="3" length="6" height="2"/>
         <components>
