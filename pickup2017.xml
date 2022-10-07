@@ -495,14 +495,14 @@
         <i3dMapping id="interior_decals" node="0>0|13|0"/>
         <i3dMapping id="display_decals" node="0>0|13|1"/>
         <i3dMapping id="dashboard_decals" node="0>0|13|2"/>
-        <i3dMapping id="HeckAchse" node="0>3|0|2"/>
-        <i3dMapping id="innerLightLeft" node="0>3|0|3|0|0"/>
-        <i3dMapping id="innerLightRight" node="0>3|0|3|0|1"/>
-        <i3dMapping id="backLightLeft" node="0>3|0|2|0|0|0|0"/>
-        <i3dMapping id="backLightRight" node="0>3|0|2|0|0|0|1"/>
-        <i3dMapping id="backLightLeft1" node="0>3|0|2|0|0|0|0|0"/>
-        <i3dMapping id="backLightRight1" node="0>3|0|2|0|0|0|1|0"/>
-        <i3dMapping id="innerLightLeft1" node="0>3|0|3|0|0|0"/>
-        <i3dMapping id="innerLightRight1" node="0>3|0|3|0|1|0"/>
+        <i3dMapping id="HeckAchse" node="0>3|0|3"/>
+        <i3dMapping id="backLightLeft" node="0>3|0|3|0|0|0|0"/>
+        <i3dMapping id="backLightRight" node="0>3|0|3|0|0|0|1"/>
+        <i3dMapping id="backLightLeft1" node="0>3|0|3|0|0|0|0|0"/>
+        <i3dMapping id="backLightRight1" node="0>3|0|3|0|0|0|1|0"/>
+        <i3dMapping id="innerLightLeft" node="0>3|0|4|0|0"/>
+        <i3dMapping id="innerLightLeft1" node="0>3|0|4|0|0|0"/>
+        <i3dMapping id="innerLightRight" node="0>3|0|4|0|1"/>
+        <i3dMapping id="innerLightRight1" node="0>3|0|4|0|1|0"/>
     </i3dMappings>
 </vehicle>
