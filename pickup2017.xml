@@ -125,6 +125,10 @@
             <turnLightLeft shaderNode="turnlightLeft_static" intensity="15"/>
             <turnLightRight shaderNode="turnlightRight_static" intensity="15"/>
         </turnLights>
+        <beaconLights>
+            <beaconLight node="beaconLightLeft" filename="$data/shared/assets/beaconLights/lizard/beaconLight06.xml" />
+            <beaconLight node="beaconLightRight" filename="$data/shared/assets/beaconLights/lizard/beaconLight06.xml" />
+        </beaconLights>
         <dashboards>
             <dashboard displayType="EMITTER" valueType="lightState" node="interior_decals" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
             <dashboard displayType="EMITTER" valueType="lightState" node="steeringWheel_decals" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
@@ -504,5 +508,7 @@
         <i3dMapping id="innerLightLeft1" node="0>3|0|4|0|0|0"/>
         <i3dMapping id="innerLightRight" node="0>3|0|4|0|1"/>
         <i3dMapping id="innerLightRight1" node="0>3|0|4|0|1|0"/>
+        <i3dMapping id="beaconLightRight" node="0>3|1|0"/>
+        <i3dMapping id="beaconLightLeft" node="0>3|1|1"/>
     </i3dMappings>
 </vehicle>
