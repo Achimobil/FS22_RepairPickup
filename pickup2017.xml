@@ -129,6 +129,8 @@
 		<beaconLights>
 			<beaconLight node="beaconLightLeft" filename="$data/shared/assets/beaconLights/lizard/beaconLight06.xml"/>
 			<beaconLight node="beaconLightRight" filename="$data/shared/assets/beaconLights/lizard/beaconLight06.xml"/>
+			<beaconLight node="beaconLightBar" filename="models/rulBar02/rulBar02_1.xml" />
+			<beaconLight node="beaconLightBar" filename="models/rulBar02/rulBar02_2.xml" />
 		</beaconLights>
 		<dashboards>
 			<dashboard displayType="EMITTER" valueType="lightState" node="interior_decals" intensity="0.2" lightTypes="0" groups="MOTOR_ACTIVE"/>
@@ -372,6 +374,23 @@
 	<foliageBending>
 		<bendingNode minX="-1" maxX="1" minZ="-2.75" maxZ="2.65" yOffset="0.4"/>
 	</foliageBending>
+	<designConfigurations>
+        <designConfiguration name="$l10n_rul_1" price="0">
+            <objectChange node="beaconLightLeft" visibilityActive="false"/>
+            <objectChange node="beaconLightRight" visibilityActive="false"/>
+            <objectChange node="beaconLightBar" visibilityActive="false"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_rul_2" price="100">
+            <objectChange node="beaconLightLeft" visibilityActive="true"/>
+            <objectChange node="beaconLightRight" visibilityActive="true"/>
+            <objectChange node="beaconLightBar" visibilityActive="false"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_rul_3" price="200">
+            <objectChange node="beaconLightLeft" visibilityActive="false"/>
+            <objectChange node="beaconLightRight" visibilityActive="false"/>
+            <objectChange node="beaconLightBar" visibilityActive="true"/>
+        </designConfiguration>
+    </designConfigurations>
 	<baseMaterial>
 		<material name="pickup2017_mat" baseNode="pickup2017_vis">
 			<shaderParameter name="colorMat0" value="SHARED_WHITE1"/>
@@ -518,5 +537,6 @@
 		<i3dMapping id="innerLightRight1" node="0>3|0|4|0|1|0"/>
 		<i3dMapping id="beaconLightRight" node="0>3|1|0"/>
 		<i3dMapping id="beaconLightLeft" node="0>3|1|1"/>
+		<i3dMapping id="beaconLightBar" node="0>3|1|2"/>
 	</i3dMappings>
 </vehicle>

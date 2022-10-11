@@ -208,7 +208,7 @@
           </TransformGroup>
           <TransformGroup name="cameras" nodeId="109">
             <TransformGroup name="outdoorCameraTarget" translation="0 0.9 -0" rotation="-24 180 0" nodeId="110">
-              <Camera name="outdoorCamera" translation="0.0113889 1.36741 -0.962942" rotation="154.824 -9.07592 -175.914" nodeId="111" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+              <Camera name="outdoorCamera" translation="-0.871433 1.23055 0.0553146" rotation="100.17 -63.326 -117.557" nodeId="111" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
             </TransformGroup>
             <Camera name="indoorCamera" translation="0.4183 1.59 0.23" rotation="-10 180 0" nodeId="112" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
             <TransformGroup name="cameraRaycastNode1" translation="0 1.1528 2.51194" nodeId="113"/>
@@ -467,8 +467,9 @@
             </TransformGroup>
           </Shape>
           <TransformGroup name="ruleBar" translation="0 1.75 0.2" nodeId="307">
-            <TransformGroup name="beaconLightRight" translation="0.4 0 0" nodeId="309"/>
-            <TransformGroup name="beaconLightLeft" translation="-0.4 0 0" nodeId="310"/>
+            <TransformGroup name="beaconLightRight" translation="0.4 0 0" nodeId="308"/>
+            <TransformGroup name="beaconLightLeft" translation="-0.4 0 0" nodeId="309"/>
+            <TransformGroup name="beaconLightBar" translation="0 0.07 -0.1" nodeId="311"/>
           </TransformGroup>
         </TransformGroup>
       </Shape>
