@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<vehicle type="car" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+<vehicle type="fuelCar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
 	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 	<storeData>
 		<name>
@@ -217,6 +217,7 @@
 			<dashboard displayType="ROT" valueType="decelerationAxis" node="pedalBrake" minRot="0 0 0" maxRot="-20 0 0" doInterpolation="true" groups="MOTOR_ACTIVE"/>
 		</dashboards>
 	</drivable>
+	
 	<fillUnit>
 		<fillUnitConfigurations>
 			<fillUnitConfiguration>
@@ -224,10 +225,25 @@
 					<fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="120">
 						<dashboard displayType="ROT" valueType="fillLevel" node="needleFuel" minRot="120" maxRot="-5" rotAxis="3" doInterpolation="true" interpolationSpeed="0.3" groups="MOTOR_ACTIVE"/>
 					</fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="diesel" capacity="4000">
+                        <!-- <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fillLevel" /> -->
+						<exactFillRootNode node="exactFillRootNode"/>
+                    </fillUnit>
+					<fillTrigger consumePtoPower="true" litersPerSecond="200"/>
 				</fillUnits>
 			</fillUnitConfiguration>
 		</fillUnitConfigurations>
 	</fillUnit>
+
+    <fillTriggerVehicle triggerNode="fuelTrigger" fillUnitIndex="2" litersPerSecond="200"/>
+
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="dischargeTrigger" emptySpeed="200" fillUnitIndex="2" allowAIDischarge="true">
+            <info width="1.0" length="0.5" zOffset="0.4" />
+            <trigger node="dischargeTrigger" />
+        </dischargeNode>
+    </dischargeable>
+	
 	<motorized statsType="car">
 		<consumerConfigurations>
 			<consumerConfiguration>
@@ -538,5 +554,8 @@
 		<i3dMapping id="beaconLightRight" node="0>3|1|0"/>
 		<i3dMapping id="beaconLightLeft" node="0>3|1|1"/>
 		<i3dMapping id="beaconLightBar" node="0>3|1|2"/>
+		<i3dMapping id="fuelTrigger" node="0>3|2|0"/>
+		<i3dMapping id="dischargeTrigger" node="0>3|2|1"/>
+		<i3dMapping id="exactFillRootNode" node="0>3|2|2"/>
 	</i3dMappings>
 </vehicle>

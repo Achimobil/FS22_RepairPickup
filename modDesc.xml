@@ -1,15 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="60">
-    <author>User</author>
-    <version>1.0.0.0</version>
-    <title>
-        <en>My Mod Name</en>
-    </title>
-    <description>
-        <en>My Mod Description</en>
-    </description>
-    <iconFilename>icon.png</iconFilename>
-    <storeItems>
-        <storeItem xmlFilename="pickup2017.xml"/>
-    </storeItems>
+	<author>User</author>
+	<version>1.0.0.0</version>
+	<title>
+		<en>My Mod Name</en>
+	</title>
+	<description>
+		<en>My Mod Description</en>
+	</description>
+	<iconFilename>icon.png</iconFilename>
+	<storeItems>
+		<storeItem xmlFilename="pickup2017.xml"/>
+	</storeItems>
+	<vehicleTypes>
+		<type name="fuelCar" parent="car" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="fillVolume" />
+			<specialization name="fillTriggerVehicle"/>
+			<specialization name="dischargeable"/>
+		</type>
+	</vehicleTypes>
 </modDesc>
