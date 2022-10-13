@@ -226,7 +226,7 @@
 						<dashboard displayType="ROT" valueType="fillLevel" node="needleFuel" minRot="120" maxRot="-5" rotAxis="3" doInterpolation="true" interpolationSpeed="0.3" groups="MOTOR_ACTIVE"/>
 					</fillUnit>
                     <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="diesel" capacity="4000">
-                        <!-- <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fillLevel" /> -->
+                        <dashboard displayType="TEXT" valueType="fillLevel" node="numbersFillLevel" textColor="0.05 0.05 0.05 1" textSize="0.07" textMask="00000" font="DIGIT" textAlignment="RIGHT"/>
 						<exactFillRootNode node="exactFillRootNode"/>
                     </fillUnit>
 					<fillTrigger consumePtoPower="true" litersPerSecond="200"/>
@@ -557,5 +557,6 @@
 		<i3dMapping id="fuelTrigger" node="0>3|2|0"/>
 		<i3dMapping id="dischargeTrigger" node="0>3|2|1"/>
 		<i3dMapping id="exactFillRootNode" node="0>3|2|2"/>
+		<i3dMapping id="numbersFillLevel" node="0>3|2|3"/>
 	</i3dMappings>
 </vehicle>

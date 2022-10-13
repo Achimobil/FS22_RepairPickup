@@ -210,7 +210,7 @@
           </TransformGroup>
           <TransformGroup name="cameras" nodeId="111">
             <TransformGroup name="outdoorCameraTarget" translation="0 0.9 -0" rotation="-24 180 0" nodeId="112">
-              <Camera name="outdoorCamera" translation="-5.1267 2.65023 -0.301375" rotation="100.17 -63.326 -117.557" nodeId="113" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+              <Camera name="outdoorCamera" translation="-4.17022 4.20749 0.521323" rotation="91.1004 -52.7299 -144.17" nodeId="113" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
             </TransformGroup>
             <Camera name="indoorCamera" translation="0.4183 1.59 0.23" rotation="-10 180 0" nodeId="114" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
             <TransformGroup name="cameraRaycastNode1" translation="0 1.1528 2.51194" nodeId="115"/>
@@ -477,6 +477,7 @@
             <Shape shapeId="71" name="fuelTrigger" scale="6 2 5" kinematic="true" compound="true" trigger="true" collisionMask="1088421888" nodeId="314" materialIds="18" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
             <Shape shapeId="71" name="dischargeTrigger" scale="6 2 5" kinematic="true" compound="true" trigger="true" collisionMask="1073741824" nodeId="315" materialIds="18" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
             <Shape shapeId="71" name="exactFillRootNode" scale="6 2 5" kinematic="true" compound="true" collisionMask="1073741824" nodeId="316" materialIds="18" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <TransformGroup name="numbersFillLevel" translation="0.79 0.535 2.2" rotation="0 90 0" nodeId="318"/>
           </TransformGroup>
         </TransformGroup>
       </Shape>
