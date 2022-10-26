@@ -19,7 +19,8 @@ function RepairCarSpecialization.initSpecialization()	local schema = Vehicle.xml
 	schema:register(XMLValueType.NODE_INDEX, baseXmlPath .. ".triggerNodes.triggerNode(?)#node", "Trigger node for repair")
 	schema:register(XMLValueType.FLOAT, baseXmlPath .. "#repairPerInterval", "Percentag of repaired damage per interval", 0.2)
 	schema:register(XMLValueType.INT, baseXmlPath .. "#repairInterval", "miliseconds between repairs", 5000)
-	schema:register(XMLValueType.INT, baseXmlPath .. "#repairCostFactor", "miliseconds between repairs", 1)
+	schema:register(XMLValueType.INT, baseXmlPath .. "#repairCostFactor", "factor for repair costs", 1)
+	schema:register(XMLValueType.INT, baseXmlPath .. "#fillUnitIndex", "Fill unit index to consume instead of money. Money used when not set")
 
 	schema:setXMLSpecializationType()
 end
@@ -41,7 +42,7 @@ function RepairCarSpecialization:onLoad(savegame)
 	-- init for server and client here
 	self.spec_repairCar = {};
 	local spec = self.spec_repairCar;
-	spec.debug = true;
+	spec.debug = false;
 	
 	if self.isServer then
 		spec.triggerNodes = {};
@@ -51,6 +52,13 @@ function RepairCarSpecialization:onLoad(savegame)
 		spec.repairPerInterval = self.xmlFile:getValue(baseXmlPath .. "#repairPerInterval", 0.2);
 		spec.repairInterval = self.xmlFile:getValue(baseXmlPath .. "#repairInterval", 5000);
 		spec.repairCostFactor = self.xmlFile:getValue(baseXmlPath .. "#repairCostFactor", 1);
+		spec.fillUnitIndex = self.xmlFile:getValue(baseXmlPath .. "#fillUnitIndex")
+		
+		if spec.fillUnitIndex ~= nil then
+			-- define the costs to calcualte the amount of filltype used
+			spec.fillType = self:getFillUnitFirstSupportedFillType(spec.fillUnitIndex);
+			spec.fillTypePricePerLiter = g_currentMission.economyManager:getPricePerLiter(spec.fillType)
+		end
 		
 		self.xmlFile:iterate(baseXmlPath .. ".triggerNodes.triggerNode", 
 			function (index, triggerKey)
@@ -138,29 +146,43 @@ function RepairCarSpecialization:startRepairVehicles()
 			local vehicle = g_currentMission.nodeToObject[vehicle];
 			
 			if vehicle ~= nil and vehicle.getDamageAmount ~= nil then
-				self:writeToLog(true, "vehicle: " .. tostring(vehicle.rootId));
+				self:writeToLog(true, "vehicle: " .. tostring(vehicle));
 				local currentDamage = vehicle:getDamageAmount();
 				self:writeToLog(true, "currentDamage: " .. tostring(currentDamage));
 				if currentDamage >= 0.0001 then
 					-- what will be the price for the repair step
-					local repairStep = math.min(currentDamage, spec.repairPerInterval)
+					local repairStep = math.min(currentDamage, spec.repairPerInterval);
 					self:writeToLog(true, "repairStep: " .. tostring(repairStep));
 					local repairCosts = Wearable.calculateRepairPrice(self:getPrice(), repairStep) * spec.repairCostFactor;
 					self:writeToLog(true, "repairCosts: " .. tostring(repairCosts));
 					
-					if g_currentMission:getMoney() >= repairCosts then					
-						-- set amount of repair per interval here. It is in percentage where 1 is 100%
-						g_currentMission:addMoney(-repairCosts, self:getOwnerFarmId(), MoneyType.VEHICLE_REPAIR, true, true)
+					if spec.fillUnitIndex ~= nil then
+						-- repair with filltype
+						self:writeToLog(true, "repair with filltype");
+						
+						local liter = repairCosts / spec.fillTypePricePerLiter;
+						self:writeToLog(true, "needed liter: " .. tostring(liter));
+						-- reparieren, wenn es genug ist und abziehen
+						if self:getFillUnitFillLevel(spec.fillUnitIndex) >= liter then
+							self:addFillUnitFillLevel(self:getOwnerFarmId(), spec.fillUnitIndex, -liter, spec.fillType, ToolType.UNDEFINED, nil);
+							vehicle:addDamageAmount(repairStep * -1, true);
+							actionDone = true;
+						end
+					elseif g_currentMission:getMoney() >= repairCosts then					
+						-- repair with money
+						self:writeToLog(true, "repair with money")
+						g_currentMission:addMoney(-repairCosts, self:getOwnerFarmId(), MoneyType.VEHICLE_REPAIR, true, true);
 						vehicle:addDamageAmount(repairStep * -1, true);
 						actionDone = true;
 					end
 				end
 			end
-		end;
+		end
 
 		if not actionDone then
 			-- ready, remove timer
-			spec.timerId = nil;
+			-- drin lassen und solange ausführen wie ein vehicle im trigger ist
+			-- spec.timerId = nil;
 		else
 			-- not ready, use timer
 			if spec.timerId ~= nil then

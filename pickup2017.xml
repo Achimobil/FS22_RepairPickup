@@ -429,13 +429,7 @@
 	
 	<repairCar>
 		<repairCarConfigurations>
-			<repairCarConfiguration name="xml1">
-				<triggerNodes>
-					<triggerNode node="repairTriggerRight" />
-					<triggerNode node="repairTriggerLeft" />
-				</triggerNodes>
-			</repairCarConfiguration>
-			<repairCarConfiguration name="xml2">
+			<repairCarConfiguration name="Normal">
 				<triggerNodes>
 					<triggerNode node="repairTriggerRight" />
 					<triggerNode node="repairTriggerLeft" />
