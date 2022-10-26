@@ -426,6 +426,24 @@
 	</rimColorConfigurations>
 	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
 	<washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+	
+	<repairCar>
+		<repairCarConfigurations>
+			<repairCarConfiguration name="xml1">
+				<triggerNodes>
+					<triggerNode node="repairTriggerRight" />
+					<triggerNode node="repairTriggerLeft" />
+				</triggerNodes>
+			</repairCarConfiguration>
+			<repairCarConfiguration name="xml2">
+				<triggerNodes>
+					<triggerNode node="repairTriggerRight" />
+					<triggerNode node="repairTriggerLeft" />
+				</triggerNodes>
+			</repairCarConfiguration>
+		</repairCarConfigurations>
+	</repairCar>
+	
 	<i3dMappings>
 		<i3dMapping id="pickup2017_main_component1" node="0>"/>
 		<i3dMapping id="pickup2017_vis" node="0>0"/>
@@ -558,5 +576,7 @@
 		<i3dMapping id="dischargeTrigger" node="0>3|2|1"/>
 		<i3dMapping id="exactFillRootNode" node="0>3|2|2"/>
 		<i3dMapping id="numbersFillLevel" node="0>3|2|3"/>
+		<i3dMapping id="repairTriggerRight" node="0>3|3|0"/>
+		<i3dMapping id="repairTriggerLeft" node="0>3|3|1"/>
 	</i3dMappings>
 </vehicle>
