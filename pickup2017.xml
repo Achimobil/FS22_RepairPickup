@@ -302,6 +302,7 @@
 			<part node="backDoorHandle" startTime="0.08" endTime="0.13" startRot="20 0 0" endRot="0 0 0"/>
 			<part node="backDoor" startTime="0.03" endTime="1.00" startRot="0 0 0" endRot="-91 0 0"/>
 			<part node="HeckAchse" startTime="0.03" endTime="1.00" startRot="0 0 0" endRot="130 0 0"/>
+			<part node="stuetze" startTime="0.5" endTime="1" startRot="-160 0 90" endRot="0 0 90"/>
 			<sound template="metalClose" startTime="0.15" direction="-1" volumeScale="1.4" pitchScale="1.4" linkNode="backDoor"/>
 			<sound template="metalOpen" startTime="0.15" direction="1" volumeScale="1.6" pitchScale="0.8" linkNode="backDoor"/>
 			<sound template="hingeMedium" startTime="0.90" direction="-1" volumeScale="0.5" pitchScale="1.1" linkNode="backDoor"/>
@@ -555,6 +556,7 @@
 		<i3dMapping id="dashboard_decals" node="0>0|13|2"/>
 		<i3dMapping id="aufbau" node="0>3|0"/>
 		<i3dMapping id="HeckAchse" node="0>3|0|3"/>
+		<i3dMapping id="stuetze" node="0>3|0|0|0"/>
 		<i3dMapping id="backLightLeft" node="0>3|0|3|0|0|0|0"/>
 		<i3dMapping id="backLightRight" node="0>3|0|3|0|0|0|1"/>
 		<i3dMapping id="backLightLeft1" node="0>3|0|3|0|0|0|0|0"/>
