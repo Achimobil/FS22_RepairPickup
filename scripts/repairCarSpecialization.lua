@@ -27,6 +27,7 @@ end
 
 function RepairCarSpecialization.registerEventListeners(vehicleType)
 	SpecializationUtil.registerEventListener(vehicleType, "onLoad", RepairCarSpecialization);
+    SpecializationUtil.registerEventListener(vehicleType, "onDelete", RepairCarSpecialization)
 end
 
 function RepairCarSpecialization.registerFunctions(vehicleType)
@@ -77,6 +78,13 @@ function RepairCarSpecialization:onLoad(savegame)
 		if #spec.triggerNodes == 0 then
 			Logging.xmlError(self.xmlFile, "No valid trigger node found");
 		end
+	end
+end
+
+function RepairCarSpecialization:onDelete()
+	local spec = self.spec_repairCar;
+	for _, triggerNode in pairs(spec.triggerNodes) do
+		removeTrigger(triggerNode);
 	end
 end
 

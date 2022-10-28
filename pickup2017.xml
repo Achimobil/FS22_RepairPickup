@@ -438,6 +438,12 @@
 					<triggerNode node="repairTriggerLeft" />
 				</triggerNodes>
 			</repairCarConfiguration>
+			<repairCarConfiguration name="Personal" repairPerInterval="0.02" repairInterval="1000" fillUnitIndex="2">
+				<triggerNodes>
+					<triggerNode node="repairTriggerRight" />
+					<triggerNode node="repairTriggerLeft" />
+				</triggerNodes>
+			</repairCarConfiguration>
 		</repairCarConfigurations>
 	</repairCar>
 	
