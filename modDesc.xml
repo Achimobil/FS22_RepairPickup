@@ -22,4 +22,38 @@
 			<specialization name="repairCar"/>
 		</type>
 	</vehicleTypes>
+	<l10n>
+		<text name="turnRepairOn">
+			<de>Reparatur einschalten</de>
+			<en>Activate repair</en>
+		</text>
+		<text name="turnRepairOff">
+			<de>Reparatur ausschalten</de>
+			<en>Deactivate repair</en>
+		</text>
+		<text name="repair_payType">
+			<de>Reparatur bezahlen mit</de>
+			<en>Repair paid by</en>
+		</text>
+		<text name="repairForMoney">
+			<de>Geld</de>
+			<en>Money</en>
+		</text>
+		<text name="repairForMaintenance">
+			<de>Wartung</de>
+			<en>Maintenance</en>
+		</text>
+		<text name="rul_1">
+			<de>Ohne</de>
+			<en>None</en>
+		</text>
+		<text name="rul_2">
+			<de>Warnleuchten</de>
+			<en>Warning lights</en>
+		</text>
+		<text name="rul_3">
+			<de>Warnbalken</de>
+			<en>Warning bar</en>
+		</text>
+	</l10n>
 </modDesc>

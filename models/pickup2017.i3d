@@ -210,7 +210,7 @@
           </TransformGroup>
           <TransformGroup name="cameras" nodeId="437">
             <TransformGroup name="outdoorCameraTarget" translation="0 0.9 -0" rotation="-24 180 0" nodeId="438">
-              <Camera name="outdoorCamera" translation="2.18624 -0.180761 10.5423" rotation="4.08558 12.7059 5.75893" nodeId="439" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+              <Camera name="outdoorCamera" translation="0.738785 -0.446656 10.7467" rotation="4.45755 4.97894 2.22077" nodeId="439" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
             </TransformGroup>
             <Camera name="indoorCamera" translation="0.4183 1.59 0.23" rotation="-10 180 0" nodeId="440" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
             <TransformGroup name="cameraRaycastNode1" translation="0 1.1528 2.51194" nodeId="441"/>
@@ -403,7 +403,7 @@
             <TransformGroup name="tensionBeltStart3" translation="0.784215 0.777599 -2.133" rotation="0 -90 0" nodeId="578">
               <TransformGroup name="tensionBeltEnd3" translation="-0 0 1.56822" nodeId="579"/>
             </TransformGroup>
-            <Shape shapeId="48" name="beltActivationTrigger" translation="0 1.26665 -1.93038" kinematic="true" compound="true" trigger="true" collisionMask="1048576" nodeId="580" materialIds="331" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="48" name="beltActivationTrigger" translation="0 1.26665 -1.93038" visibility="false" nodeId="580" materialIds="331" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
           </TransformGroup>
           <TransformGroup name="ai" nodeId="581">
             <TransformGroup name="aiCollisionNode" translation="0 0 2.63371" nodeId="582"/>

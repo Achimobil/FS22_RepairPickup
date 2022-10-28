@@ -229,7 +229,7 @@
                         <dashboard displayType="TEXT" valueType="fillLevel" node="numbersFillLevel" textColor="0.05 0.05 0.05 1" textSize="0.07" textMask="00000" font="DIGIT" textAlignment="RIGHT"/>
 						<exactFillRootNode node="exactFillRootNodeDiesel"/>
                     </fillUnit>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes= "MAINTENANCE" capacity="400">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes= "MAINTENANCE" capacity="10000">
 						<exactFillRootNode node="exactFillRootNodeWartung"/>
                     </fillUnit>
 					<fillTrigger consumePtoPower="true" litersPerSecond="200"/>
@@ -324,7 +324,7 @@
 	<foldable>
 		<foldingConfigurations>
 			<foldingConfiguration>
-				<foldingParts requiresPower="false">
+				<foldingParts requiresPower="false" negDirectionText="$l10n_turnRepairOn" posDirectionText="$l10n_turnRepairOff">
 					<foldingPart animationName="backDoor" speedScale="1.3"/>
 				</foldingParts>
 			</foldingConfiguration>
@@ -373,21 +373,6 @@
 		<agent width="2.05" length="5.5" height="1.85" lengthOffset="1.35" frontOffset="3.09"/>
 		<collisionTrigger node="aiCollisionNode" width="2.4" height="1.8"/>
 	</ai>
-	<tensionBelts>
-		<tensionBeltsConfigurations>
-			<tensionBeltsConfiguration>
-				<tensionBelts linkNode="tensionBelts" jointNode="0>" width="0.05" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="0.1" defaultOffsetSide="0.1" defaultHeight="4" activationTrigger="beltActivationTrigger">
-					<tensionBelt startNode="tensionBeltStart1" endNode="tensionBeltEnd1"/>
-					<tensionBelt startNode="tensionBeltStart2" endNode="tensionBeltEnd2"/>
-					<tensionBelt startNode="tensionBeltStart3" endNode="tensionBeltEnd3"/>
-					<sounds>
-						<addBelt template="beltOpen"/>
-						<removeBelt template="beltClose"/>
-					</sounds>
-				</tensionBelts>
-			</tensionBeltsConfiguration>
-		</tensionBeltsConfigurations>
-	</tensionBelts>
 	<foliageBending>
 		<bendingNode minX="-1" maxX="1" minZ="-2.75" maxZ="2.65" yOffset="0.4"/>
 	</foliageBending>
@@ -429,14 +414,14 @@
 	<washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
 	
 	<repairCar>
-		<repairCarConfigurations>
-			<repairCarConfiguration name="Normal">
+		<repairCarConfigurations title="$l10n_repair_payType">
+			<repairCarConfiguration name="$l10n_repairForMoney">
 				<triggerNodes>
 					<triggerNode node="repairTriggerRight" />
 					<triggerNode node="repairTriggerLeft" />
 				</triggerNodes>
 			</repairCarConfiguration>
-			<repairCarConfiguration name="Personal" repairPerInterval="0.02" repairInterval="1000" fillUnitIndex="3">
+			<repairCarConfiguration name="$l10n_repairForMaintenance" repairPerInterval="0.02" repairInterval="1000" fillUnitIndex="3">
 				<triggerNodes>
 					<triggerNode node="repairTriggerRight" />
 					<triggerNode node="repairTriggerLeft" />
