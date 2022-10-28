@@ -225,9 +225,12 @@
 					<fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="DIESEL" capacity="120">
 						<dashboard displayType="ROT" valueType="fillLevel" node="needleFuel" minRot="120" maxRot="-5" rotAxis="3" doInterpolation="true" interpolationSpeed="0.3" groups="MOTOR_ACTIVE"/>
 					</fillUnit>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="DIESEL MAINTENANCE" capacity="4000">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="DIESEL" capacity="4000">
                         <dashboard displayType="TEXT" valueType="fillLevel" node="numbersFillLevel" textColor="0.05 0.05 0.05 1" textSize="0.07" textMask="00000" font="DIGIT" textAlignment="RIGHT"/>
-						<exactFillRootNode node="exactFillRootNode"/>
+						<exactFillRootNode node="exactFillRootNodeDiesel"/>
+                    </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes= "MAINTENANCE" capacity="400">
+						<exactFillRootNode node="exactFillRootNodeWartung"/>
                     </fillUnit>
 					<fillTrigger consumePtoPower="true" litersPerSecond="200"/>
 				</fillUnits>
@@ -236,13 +239,6 @@
 	</fillUnit>
 
     <fillTriggerVehicle triggerNode="fuelTrigger" fillUnitIndex="2" litersPerSecond="200"/>
-
-    <dischargeable requiresTipOcclusionArea="false">
-        <dischargeNode node="dischargeTrigger" emptySpeed="200" fillUnitIndex="2" allowAIDischarge="true">
-            <info width="1.0" length="0.5" zOffset="0.4" />
-            <trigger node="dischargeTrigger" />
-        </dischargeNode>
-    </dischargeable>
 	
 	<motorized statsType="car">
 		<consumerConfigurations>
@@ -305,6 +301,8 @@
 			<part node="stuetze" startTime="0.5" endTime="1" startRot="-160 0 90" endRot="0 0 90"/>
 			<part node="repairTriggerRight" startTime="0" endTime="1" startTrans="2.2 -3 0" endTrans="2.2 0 0"/>
 			<part node="repairTriggerLeft" startTime="0" endTime="1" startTrans="-2.2 -3 0" endTrans="-2.2 0 0"/>
+			<part node="exactFillRootNodeDiesel" startTime="0" endTime="1" startTrans="-2 0 2" endTrans="-2.2 -3 0"/>
+			<part node="exactFillRootNodeWartung" startTime="0" endTime="1" startTrans="-2 0 0" endTrans="-2.2 -3 0"/>
 			<sound template="metalClose" startTime="0.15" direction="-1" volumeScale="1.4" pitchScale="1.4" linkNode="backDoor"/>
 			<sound template="metalOpen" startTime="0.15" direction="1" volumeScale="1.6" pitchScale="0.8" linkNode="backDoor"/>
 			<sound template="hingeMedium" startTime="0.90" direction="-1" volumeScale="0.5" pitchScale="1.1" linkNode="backDoor"/>
@@ -438,7 +436,7 @@
 					<triggerNode node="repairTriggerLeft" />
 				</triggerNodes>
 			</repairCarConfiguration>
-			<repairCarConfiguration name="Personal" repairPerInterval="0.02" repairInterval="1000" fillUnitIndex="2">
+			<repairCarConfiguration name="Personal" repairPerInterval="0.02" repairInterval="1000" fillUnitIndex="3">
 				<triggerNodes>
 					<triggerNode node="repairTriggerRight" />
 					<triggerNode node="repairTriggerLeft" />
@@ -577,8 +575,8 @@
 		<i3dMapping id="beaconLightLeft" node="0>3|1|1"/>
 		<i3dMapping id="beaconLightBar" node="0>3|1|2"/>
 		<i3dMapping id="fuelTrigger" node="0>3|2|0"/>
-		<i3dMapping id="dischargeTrigger" node="0>3|2|1"/>
-		<i3dMapping id="exactFillRootNode" node="0>3|2|2"/>
+		<i3dMapping id="exactFillRootNodeDiesel" node="0>3|2|1"/>
+		<i3dMapping id="exactFillRootNodeWartung" node="0>3|2|2"/>
 		<i3dMapping id="numbersFillLevel" node="0>3|2|3"/>
 		<i3dMapping id="repairTriggerRight" node="0>3|3|0"/>
 		<i3dMapping id="repairTriggerLeft" node="0>3|3|1"/>

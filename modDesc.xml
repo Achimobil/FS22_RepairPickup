@@ -19,7 +19,6 @@
 		<type name="fuelCar" parent="car" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
 			<specialization name="fillVolume" />
 			<specialization name="fillTriggerVehicle"/>
-			<specialization name="dischargeable"/>
 			<specialization name="repairCar"/>
 		</type>
 	</vehicleTypes>
