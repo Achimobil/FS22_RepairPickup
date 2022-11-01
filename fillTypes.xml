@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+	<fillTypes>
+		<fillType name="MAINTENANCE" title="$l10n_fillType_maintenance" showOnPriceTable="true" unitShort="$l10n_unit_literShort">
+			<physics massPerLiter="0.00" maxPhysicalSurfaceAngle="0"/>
+			<economy pricePerLiter="0.2"/>
+			<image hud="models/textures/hud_fill_wartung.png"/>
+		</fillType>
+	</fillTypes>
+</map>

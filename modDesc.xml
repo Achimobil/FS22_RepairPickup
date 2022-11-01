@@ -1,12 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="60">
-	<author>User</author>
-	<version>1.0.0.0</version>
+<modDesc descVersion="71">
+	<author>Achimobil</author>
+	<version>0.2.0.0</version>
 	<title>
-		<en>My Mod Name</en>
+		<de>Feld Reperatur Pickup</de>
+		<en>Field Repair Pickup</en>
 	</title>
 	<description>
-		<en>My Mod Description</en>
+		<de><![CDATA[Der 2017er Pickup mit einem Feld Reperatur Aufbau. 
+
+Ein 4000l Dieseltank zum auftanken auf dem Feld ist vorhanden.
+Reperatur wird entweder normal per Geld abgerechnt oder durch den Verbrauch von Wartung.
+Auftanken bei zugeklapptem Fahrzeug auf der rechten Seite.
+Betanken auf dem Feld auf der Linken Seite.
+Reperatur bei aufgeklapptem Fahrzeug hinten.
+Farbwahlt für Chassis, Felgen und Aufbau.
+
+Leistung: 300PS
+Max: 120 km/h
+Tank 4.000l Diesel und 10.000l Wartung
+Preis 45.000 €
+
+]]></de>
+		<en><![CDATA[The 2017 pickup with a field repair extension. 
+
+A 4000l diesel tank for refuelling in the field is available.
+Repairs are charged either by money or by maintenance consumption.
+Refuelling with the vehicle closed on the right side.
+Refuelling in the field on the left side.
+Repair with the vehicle open at the rear.
+Choice of colours for chassis, rims and body.
+
+Power: 300PS
+Max: 120 km/h
+Tank 4.000l diesel and 10.000l maintenance
+Price 45.000 $
+
+]]></en>
 	</description>
 	<iconFilename>icon.png</iconFilename>
 	<storeItems>
@@ -22,6 +52,7 @@
 			<specialization name="repairCar"/>
 		</type>
 	</vehicleTypes>
+	<fillTypes filename="fillTypes.xml"/>
 	<l10n>
 		<text name="turnRepairOn">
 			<de>Reparatur einschalten</de>
