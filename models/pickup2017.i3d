@@ -208,7 +208,7 @@
           </TransformGroup>
           <TransformGroup name="cameras" nodeId="112">
             <TransformGroup name="outdoorCameraTarget" translation="0 0.9 -0" rotation="-24 180 0" nodeId="113">
-              <Camera name="outdoorCamera" translation="0.391508 -0.989377 10.7694" rotation="7.14844 3.09572 1.37746" nodeId="114" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+              <Camera name="outdoorCamera" translation="-9.51643 0.139316 5.35139" rotation="32.9461 -53.7133 -37.3348" nodeId="114" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
             </TransformGroup>
             <Camera name="indoorCamera" translation="0.4183 1.59 0.23" rotation="-10 180 0" nodeId="115" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
             <TransformGroup name="cameraRaycastNode1" translation="0 1.1528 2.51194" nodeId="116"/>
@@ -432,7 +432,7 @@
           <Shape shapeId="62" name="interior1" clipDistance="75" nodeId="277" materialIds="12" castsShadows="true" receiveShadows="true" skinBindNodeIds="230 204"/>
         </TransformGroup>
         <TransformGroup name="repair" nodeId="278">
-          <Shape shapeId="63" name="aufbau" rotation="-6.83019e-06 -0 0" referenceId="28" dynamic="true" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="289" materialIds="4" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="63" name="aufbau" rotation="-6.83019e-06 -0 0" referenceId="28" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="289" materialIds="4" castsShadows="true" receiveShadows="true">
             <Shape shapeId="64" name="Cylinder" translation="0 1.77657 -2.50359" rotation="-4.32571e-06 -2.50448e-06 -90" nodeId="290" materialIds="15">
               <TransformGroup name="StuetzAchse" translation="0.0894027 0.651571 0.0173392" rotation="-4.32571e-06 2.50448e-06 90" nodeId="291">
                 <Shape shapeId="65" name="stuetze" translation="0.0025003 0.0711982 -0.0386131" rotation="-28.2822 -0 0" nodeId="292" materialIds="15"/>
@@ -446,7 +446,7 @@
             </TransformGroup>
             <Shape shapeId="70" name="Display1" translation="0.785701 1.56613 -0.668747" rotation="-6.83019e-06 -0 0" nodeId="298" materialIds="4"/>
             <TransformGroup name="HeckAchse" translation="0 1.77657 -2.50359" rotation="130 -0 0" nodeId="299">
-              <Shape shapeId="71" name="Heckklappe" translation="0.00154238 -0.0937592 -0.039325" rotation="-6.83019e-06 -0 0" dynamic="true" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="300" materialIds="4" castsShadows="true" receiveShadows="true">
+              <Shape shapeId="71" name="Heckklappe" translation="0.00154238 -0.0937592 -0.039325" rotation="-6.83019e-06 -0 0" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="300" materialIds="4" castsShadows="true" receiveShadows="true">
                 <TransformGroup name="lightsBack" translation="-0.00154238 -1.68281 2.54291" rotation="-6.83019e-06 -0 0" nodeId="301">
                   <TransformGroup name="sharedLights.001" rotation="-6.83019e-06 -0 0" nodeId="302">
                     <TransformGroup name="backLightLeft" translation="0.407071 1.40683 -2.50609" rotation="-90 -180 2.50448e-06" nodeId="303">

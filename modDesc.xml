@@ -39,6 +39,7 @@ Price 45.000 $
 ]]></en>
 	</description>
 	<iconFilename>icon.png</iconFilename>
+	<multiplayer supported="true"/>
 	<storeItems>
 		<storeItem xmlFilename="pickup2017.xml"/>
 	</storeItems>
