@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="71">
 	<author>Achimobil</author>
-	<version>0.2.0.0</version>
+	<version>0.3.0.0</version>
 	<title>
 		<de>Feld Reperatur Pickup</de>
 		<en>Field Repair Pickup</en>
@@ -11,6 +11,7 @@
 
 Ein 4000l Dieseltank zum auftanken auf dem Feld ist vorhanden.
 Reperatur wird entweder normal per Geld abgerechnt oder durch den Verbrauch von Wartung.
+Version mit Wartung nur kaufbar, wenn Wartung und Revamp verfügbar sind.
 Auftanken bei zugeklapptem Fahrzeug auf der rechten Seite.
 Betanken auf dem Feld auf der Linken Seite.
 Reperatur bei aufgeklapptem Fahrzeug hinten.
@@ -26,6 +27,7 @@ Preis 45.000 €
 
 A 4000l diesel tank for refuelling in the field is available.
 Repairs are charged either by money or by maintenance consumption.
+Version with maintenance can only be purchased if maintenance and revamp are available.
 Refuelling with the vehicle closed on the right side.
 Refuelling in the field on the left side.
 Repair with the vehicle open at the rear.
@@ -53,7 +55,17 @@ Price 45.000 $
 			<specialization name="repairCar"/>
 		</type>
 	</vehicleTypes>
-	<fillTypes filename="fillTypes.xml"/>
+	
+	<extraSourceFiles>
+		<sourceFile filename="scripts/revamp_check.lua"/>
+	</extraSourceFiles>
+	
+	<revamp minVersion="1.3.5.0" supressWarning="true">
+		<storeItems>
+			<storeItem xmlFilename="pickup2017Maintenance.xml" addWhenfillTypes="MAINTENANCE"/>
+		</storeItems>
+	</revamp>
+	
 	<l10n>
 		<text name="turnRepairOn">
 			<de>Reparatur einschalten</de>
@@ -86,6 +98,14 @@ Price 45.000 $
 		<text name="rul_3">
 			<de>Warnbalken</de>
 			<en>Warning bar</en>
+		</text>
+		<text name="function_car_maintenance">
+			<de>Fahrzeug zur Feld Reperatur mit Wartung</de>
+			<en>Vehicle for Field Service with maintenance</en>
+		</text>
+		<text name="function_car_fieldservice">
+			<de>Fahrzeug zur Feld Reperatur</de>
+			<en>Vehicle for Field Service</en>
 		</text>
 	</l10n>
 </modDesc>

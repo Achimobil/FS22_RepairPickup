@@ -3,8 +3,8 @@
 	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 	<storeData>
 		<name>
-			<de>Feld Service Pickup</de>
-			<en>Field Service Pickup</en>
+			<de>Feld Service Pickup Wartung</de>
+			<en>Field Service Pickup Maintenance</en>
 		</name>
 		<specs>
 			<power>300</power>
@@ -12,9 +12,9 @@
 		</specs>
 		<functions>
 			<function>$l10n_function_car</function>
-			<function>$l10n_function_car_fieldservice</function>
+			<function>$l10n_function_car_maintenance</function>
 		</functions>
-		<image>store_pickup2017.dds</image>
+		<image>store_pickup2017Maintenance.dds</image>
 		<price>45000</price>
 		<lifetime>600</lifetime>
 		<rotation>0</rotation>
@@ -225,6 +225,9 @@
                         <dashboard displayType="TEXT" valueType="fillLevel" node="numbersFillLevel" textColor="0.05 0.05 0.05 1" textSize="0.07" textMask="00000" font="DIGIT" textAlignment="RIGHT"/>
 						<exactFillRootNode node="exactFillRootNodeDiesel"/>
                     </fillUnit>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes= "MAINTENANCE" capacity="10000">
+						<exactFillRootNode node="exactFillRootNodeWartung"/>
+                    </fillUnit>
 					<fillTrigger consumePtoPower="true" litersPerSecond="200"/>
 				</fillUnits>
 			</fillUnitConfiguration>
@@ -408,7 +411,7 @@
 	
 	<repairCar>
 		<repairCarConfigurations title="$l10n_repair_payType">
-			<repairCarConfiguration name="$l10n_repairForMoney">
+			<repairCarConfiguration name="$l10n_repairForMaintenance" repairPerInterval="0.02" repairInterval="1000" fillUnitIndex="3">
 				<triggerNodes>
 					<triggerNode node="repairTriggerRight" />
 					<triggerNode node="repairTriggerLeft" />
