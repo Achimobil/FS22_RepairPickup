@@ -253,7 +253,7 @@
 			</differentialConfiguration>
 		</differentialConfigurations>
 		<motorConfigurations>
-			<motorConfiguration name="Pickup 2017" hp="300" price="0">
+			<motorConfiguration hp="300" price="0">
 				<motor torqueScale="0.6" minRpm="1000" maxRpm="6000" maxForwardSpeed="120" maxBackwardSpeed="22" brakeForce="2.2" lowBrakeForceScale="0.22" dampingRateScale="0.4">
 					<torque rpm="1000" torque="0.9"/>
 					<torque rpm="2400" torque="1"/>
