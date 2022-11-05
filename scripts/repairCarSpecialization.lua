@@ -83,8 +83,10 @@ end
 
 function RepairCarSpecialization:onDelete()
 	local spec = self.spec_repairCar;
-	for _, triggerNode in pairs(spec.triggerNodes) do
-		removeTrigger(triggerNode);
+	if spec ~= nil and spec.triggerNodes ~= nil then
+		for _, triggerNode in pairs(spec.triggerNodes) do
+			removeTrigger(triggerNode);
+		end
 	end
 end
 
