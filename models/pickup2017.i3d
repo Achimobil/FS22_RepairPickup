@@ -482,8 +482,8 @@
             <TransformGroup name="numbersFillLevel" translation="0.79 0.535 2.2" rotation="-0 90 0" nodeId="321"/>
           </TransformGroup>
           <TransformGroup name="repairArea" translation="0 1 -4" nodeId="322">
-            <Shape shapeId="73" name="repairTriggerRight" translation="-2.2 0 0" kinematic="true" trigger="true" collisionMask="12288" nodeId="323" materialIds="17" nonRenderable="true" distanceBlending="false"/>
-            <Shape shapeId="73" name="repairTriggerLeft" translation="2.2 0 0" kinematic="true" trigger="true" collisionMask="12288" nodeId="324" materialIds="17" nonRenderable="true" distanceBlending="false"/>
+            <Shape shapeId="73" name="repairTriggerRight" translation="-2.2 0 0" kinematic="true" trigger="true" collisionMask="18874368" nodeId="323" materialIds="17" nonRenderable="true" distanceBlending="false"/>
+            <Shape shapeId="73" name="repairTriggerLeft" translation="2.2 0 0" kinematic="true" trigger="true" collisionMask="18874368" nodeId="324" materialIds="17" nonRenderable="true" distanceBlending="false"/>
           </TransformGroup>
         </TransformGroup>
       </Shape>

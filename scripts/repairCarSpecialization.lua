@@ -66,8 +66,10 @@ function RepairCarSpecialization:onLoad(savegame)
 				local triggerNode = self.xmlFile:getValue(triggerKey .. "#node", nil, self.components, self.i3dMappings);
 				table.insert(spec.triggerNodes, triggerNode);
 				if triggerNode ~= nil then
-					if not CollisionFlag.getHasFlagSet(triggerNode, CollisionFlag.VEHICLE) then
-						Logging.error("Missing collision mask bit '%d'. Please add this bit to trigger node '%s'", CollisionFlag.getBit(CollisionFlag.VEHICLE), I3DUtil.getNodePath(triggerNode))
+					if not CollisionFlag.getHasFlagSet(triggerNode, CollisionFlag.TRIGGER_VEHICLE) then
+						Logging.error("Missing collision mask bit '%d'. Please add this bit to trigger node '%s'", CollisionFlag.getBit(CollisionFlag.TRIGGER_VEHICLE), I3DUtil.getNodePath(triggerNode))
+					elseif not CollisionFlag.getHasFlagSet(triggerNode, CollisionFlag.TRIGGER_DYNAMIC_OBJECT) then
+						Logging.error("Missing collision mask bit '%d'. Please add this bit to trigger node '%s'", CollisionFlag.getBit(CollisionFlag.TRIGGER_DYNAMIC_OBJECT), I3DUtil.getNodePath(triggerNode))
 					else
 						addTrigger(triggerNode, "repairTriggerCallback", self);
 					end
