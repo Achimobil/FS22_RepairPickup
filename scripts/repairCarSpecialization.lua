@@ -111,7 +111,7 @@ function RepairCarSpecialization:repairTriggerCallback(triggerId, otherActorId, 
 	self:writeToLog(true, "onEnter:" .. tostring(onEnter) .. " onLeave:" .. tostring(onLeave) .. " onStay:" .. tostring(onStay));
 	
 	local vehicle = g_currentMission:getNodeObject(otherActorId);
-	if vehicle ~= nil then
+	if vehicle ~= nil and vehicle.rootVehicle ~= nil then
 		local vehicleRootNode = vehicle.rootVehicle.rootNode;
 		self:writeToLog(true, "vehicle found:" .. tostring(vehicleRootNode));
 		if onEnter then
