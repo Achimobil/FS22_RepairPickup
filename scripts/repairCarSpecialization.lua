@@ -111,8 +111,8 @@ function RepairCarSpecialization:repairTriggerCallback(triggerId, otherActorId, 
 	self:writeToLog(true, "onEnter:" .. tostring(onEnter) .. " onLeave:" .. tostring(onLeave) .. " onStay:" .. tostring(onStay));
 	
 	local vehicle = g_currentMission:getNodeObject(otherActorId);
-	if vehicle ~= nil and vehicle.rootVehicle ~= nil then
-		local vehicleRootNode = vehicle.rootVehicle.rootNode;
+	if vehicle ~= nil and vehicle.getDamageAmount ~= nil then
+		local vehicleRootNode = otherActorId;
 		self:writeToLog(true, "vehicle found:" .. tostring(vehicleRootNode));
 		if onEnter then
 			local foundInTable = false;
@@ -191,21 +191,17 @@ function RepairCarSpecialization:startRepairVehicles()
 			end
 		end
 
-		if not actionDone then
-			-- ready, remove timer
-			-- drin lassen und solange ausführen wie ein vehicle im trigger ist
-			-- spec.timerId = nil;
+		if spec.timerId ~= nil then
+			self:writeToLog(true, "timer restarted")
+			return true;
 		else
-			-- not ready, use timer
-			if spec.timerId ~= nil then
-				return true;
-			else
-				-- set intervall length here in miliseconds
-				spec.timerId = addTimer(spec.repairInterval, "startRepairVehicles", self);
-			end		
+			-- set intervall length here in miliseconds
+			self:writeToLog(true, "timer added")
+			spec.timerId = addTimer(spec.repairInterval, "startRepairVehicles", self);
 		end
 	else
 		-- no vehicle, remove timer
+		self:writeToLog(true, "timer removed")
 		spec.timerId = nil;
 	end
 end
