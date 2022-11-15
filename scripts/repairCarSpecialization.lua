@@ -154,11 +154,11 @@ function RepairCarSpecialization:startRepairVehicles()
 	if spec.numVehicleInTrigger > 0 then
 
 		local actionDone = false;
-		for vehicle, vehicleCount in pairs(spec.vehicleInTrigger) do
-			local vehicle = g_currentMission.nodeToObject[vehicle];
+		for vehicleRootNode, vehicleCount in pairs(spec.vehicleInTrigger) do
+			local vehicle = g_currentMission.nodeToObject[vehicleRootNode];
 			
 			if vehicle ~= nil and vehicle.getDamageAmount ~= nil then
-				self:writeToLog(true, "vehicle: " .. tostring(vehicle));
+				self:writeToLog(true, "vehicle: " .. tostring(vehicleRootNode));
 				local currentDamage = vehicle:getDamageAmount();
 				self:writeToLog(true, "currentDamage: " .. tostring(currentDamage));
 				if currentDamage >= 0.0001 then
@@ -180,7 +180,7 @@ function RepairCarSpecialization:startRepairVehicles()
 							vehicle:addDamageAmount(repairStep * -1, true);
 							actionDone = true;
 						end
-					elseif g_currentMission:getMoney() >= repairCosts then					
+					elseif g_currentMission:getMoney(self.ownerFarmId) >= repairCosts then					
 						-- repair with money
 						self:writeToLog(true, "repair with money")
 						g_currentMission:addMoney(-repairCosts, self:getOwnerFarmId(), MoneyType.VEHICLE_REPAIR, true, true);
