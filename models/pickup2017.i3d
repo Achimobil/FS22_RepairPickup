@@ -208,7 +208,7 @@
           </TransformGroup>
           <TransformGroup name="cameras" nodeId="112">
             <TransformGroup name="outdoorCameraTarget" translation="0 0.9 -0" rotation="-24 180 0" nodeId="113">
-              <Camera name="outdoorCamera" translation="-9.51643 0.139316 5.35139" rotation="32.9461 -53.7133 -37.3348" nodeId="114" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
+              <Camera name="outdoorCamera" translation="5.49125 -0.70656 8.813" rotation="4.01681 30.0007 14.8912" nodeId="114" fov="54.4322" nearClip="0.3" farClip="5000" orthographicHeight="1"/>
             </TransformGroup>
             <Camera name="indoorCamera" translation="0.4183 1.59 0.23" rotation="-10 180 0" nodeId="115" fov="60" nearClip="0.1" farClip="5000" orthographicHeight="1"/>
             <TransformGroup name="cameraRaycastNode1" translation="0 1.1528 2.51194" nodeId="116"/>
@@ -478,7 +478,7 @@
           <TransformGroup name="diesel" translation="0 1 -3" nodeId="317">
             <Shape shapeId="72" name="fuelTrigger" translation="2.7 0 2" scale="3 2 2" kinematic="true" compound="true" trigger="true" collisionMask="1088421888" nodeId="318" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
             <Shape shapeId="72" name="exactFillRootNodeDiesel" translation="-2 0 2" scale="2 2 2" kinematic="true" compound="true" collisionMask="1073741824" nodeId="319" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
-            <Shape shapeId="72" name="exactFillRootNodeWartung" translation="-2 0 0" scale="2 2 2" kinematic="true" compound="true" collisionMask="1073741824" nodeId="320" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+            <Shape shapeId="72" name="exactFillRootNodeWartung" translation="-2 0 2" scale="2 2 2" kinematic="true" compound="true" collisionMask="1073741824" nodeId="320" materialIds="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
             <TransformGroup name="numbersFillLevel" translation="0.79 0.535 2.2" rotation="-0 90 0" nodeId="321"/>
           </TransformGroup>
           <TransformGroup name="repairArea" translation="0 1 -4" nodeId="322">
