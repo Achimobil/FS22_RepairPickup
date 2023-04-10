@@ -25,7 +25,7 @@ Dieses Skript darf unverändert in Ihren Mod kopiert und dort verwendet werden.
 Es ist nicht erlaubt, das Skript zu ändern und es in irgendeiner Weise neu zu veröffentlichen. 
 Für die Verwendung des Skriptes sind keine weiteren Fragen notwendig, jedoch ist folgendes zu beachten:
 - Ihr müsst das Skript in eurer Mod auf dem neuesten Stand halten
-- Du bist dafür verantwortlich, regelmäßig zu überprüfen, ob neue Skriptversionen im Repair Pickup auf der verbotenen Mods oder Modhub Seite veröffentlicht wurden
+- Du bist dafür verantwortlich, regelmäßig zu überprüfen, ob neue Skriptversionen im Repair Pickup auf der forbidden Mods Seite oder Modhub veröffentlicht wurden
 - Wenn ein Skript-Update verfügbar ist, musst du das neue Skript innerhalb von 4 Wochen nach Veröffentlichung des neuen Skripts verwenden
 - Wenn du dein Skript nicht innerhalb von 4 Wochen aktualisiert hast, ist es jedem anderen Modder erlaubt, das Skript in deinem Mod zu aktualisieren und es erneut zu veröffentlichen, ohne dich zu fragen.
 Du akzeptierst dies, indem du das Skript in deinen Mod kopierst.
