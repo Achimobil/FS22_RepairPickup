@@ -3,19 +3,19 @@
 	<author>Achimobil</author>
 	<version>0.3.1.0</version>
 	<title>
-		<de>Feld Reperatur Pickup</de>
+		<de>Feld Reparatur Pickup</de>
 		<en>Field Repair Pickup</en>
 	</title>
 	<description>
-		<de><![CDATA[Der 2017er Pickup mit einem Feld Reperatur Aufbau. 
+		<de><![CDATA[Der 2017er Pickup mit einem Feld Reparatur Aufbau. 
 
-Ein 4000l Dieseltank zum auftanken auf dem Feld ist vorhanden.
-Reperatur wird entweder normal per Geld abgerechnt oder durch den Verbrauch von Wartung.
+Ein 4000l Dieseltank zum Auftanken auf dem Feld ist vorhanden.
+Reparatur wird entweder normal per Geld abgerechnet oder durch den Verbrauch von Wartung.
 Version mit Wartung nur kaufbar, wenn Wartung und Revamp verfügbar sind.
 Auftanken bei zugeklapptem Fahrzeug auf der rechten Seite.
-Betanken auf dem Feld auf der Linken Seite.
-Reperatur bei aufgeklapptem Fahrzeug hinten.
-Farbwahlt für Chassis, Felgen und Aufbau.
+Betanken auf dem Feld auf der linken Seite.
+Reparatur bei aufgeklapptem Fahrzeug hinten.
+Farbwahl für Chassis, Felgen und Aufbau.
 
 Leistung: 300PS
 Max: 120 km/h
@@ -100,11 +100,11 @@ Price 45.000 $
 			<en>Warning bar</en>
 		</text>
 		<text name="function_car_maintenance">
-			<de>Fahrzeug zur Feld Reperatur mit Wartung</de>
+			<de>Fahrzeug zur Feld Reparatur mit Wartung</de>
 			<en>Vehicle for Field Service with maintenance</en>
 		</text>
 		<text name="function_car_fieldservice">
-			<de>Fahrzeug zur Feld Reperatur</de>
+			<de>Fahrzeug zur Feld Reparatur</de>
 			<en>Vehicle for Field Service</en>
 		</text>
 	</l10n>
