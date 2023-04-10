@@ -3,13 +3,17 @@ RepairCarSpecialization = {
 	prerequisitesPresent = function()
 		return true
 	end,
-	Version = "0.1.0.0",
+	Version = "0.2.0.0",
 	Name = "RepairCarSpecialization"
 }
 
 print(g_currentModName .. " - init " .. RepairCarSpecialization.Name .. "(Version: " .. RepairCarSpecialization.Version .. ")");
 
 function RepairCarSpecialization.initSpecialization()	local schema = Vehicle.xmlSchema
+	if g_configurationManager.configurations["repairCar"] ~= nil then
+		return;
+	end
+
 	g_configurationManager:addConfigurationType("repairCar", g_i18n:getText("configuration_repairCar"), "repairCar", nil, nil, nil, ConfigurationUtil.SELECTOR_MULTIOPTION)
 	
 	schema:setXMLSpecializationType("RepairCar")
