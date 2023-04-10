@@ -1,3 +1,38 @@
+--[[
+RepairCarSpecialization Script File
+
+Copyright (C) Achimobil 2023
+
+Author: Achimobil
+Date: 10.04.2023
+Version: 0.2.0.0
+
+Contact/Help/Tutorials:
+https://www.achimobil.de/ls-19-22-modding/
+
+EN Rules:
+This script is allowed to copy unchanged in your mod and use it there.
+It is not allowed to change the script and republish it in any way. 
+There is no additional question needed to use the script, but accept the following:
+- You have to keep the script in your mod up to date
+- You are responsible for checking regulary for new skript versions in the Repair Pickup publish on forbidden mods or Modhub side
+- When there is a script update available you have to use the new script inside of 4 weeks after publish of the new script
+- When you have not updated your mod withoun 4 weeks any other modder is allowed to update the script in your mod and republish it without asking you.
+You accept these by coping the script in your mod.
+
+DE Regeln:
+Dieses Skript darf unverändert in Ihren Mod kopiert und dort verwendet werden.
+Es ist nicht erlaubt, das Skript zu ändern und es in irgendeiner Weise neu zu veröffentlichen. 
+Für die Verwendung des Skriptes sind keine weiteren Fragen notwendig, jedoch ist folgendes zu beachten:
+- Ihr müsst das Skript in eurer Mod auf dem neuesten Stand halten
+- Du bist dafür verantwortlich, regelmäßig zu überprüfen, ob neue Skriptversionen im Repair Pickup auf der verbotenen Mods oder Modhub Seite veröffentlicht wurden
+- Wenn ein Skript-Update verfügbar ist, musst du das neue Skript innerhalb von 4 Wochen nach Veröffentlichung des neuen Skripts verwenden
+- Wenn du dein Skript nicht innerhalb von 4 Wochen aktualisiert hast, ist es jedem anderen Modder erlaubt, das Skript in deinem Mod zu aktualisieren und es erneut zu veröffentlichen, ohne dich zu fragen.
+Du akzeptierst dies, indem du das Skript in deinen Mod kopierst.
+
+Changelog
+- comming soon
+]]
 
 RepairCarSpecialization = {
 	prerequisitesPresent = function()
