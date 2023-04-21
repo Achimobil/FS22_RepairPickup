@@ -433,18 +433,18 @@
         </TransformGroup>
         <TransformGroup name="repair" nodeId="278">
           <Shape shapeId="63" name="aufbau" rotation="-6.83019e-06 -0 0" referenceId="28" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="289" materialIds="4" castsShadows="true" receiveShadows="true">
-            <Shape shapeId="64" name="Cylinder" translation="0 1.77657 -2.50359" rotation="-4.32571e-06 -2.50448e-06 -90" nodeId="290" materialIds="15">
+            <Shape shapeId="64" name="Cylinder" translation="0 1.77657 -2.50359" rotation="-4.32571e-06 -2.50448e-06 -90" nodeId="290" materialIds="15" castsShadows="true" receiveShadows="true">
               <TransformGroup name="StuetzAchse" translation="0.0894027 0.651571 0.0173392" rotation="-4.32571e-06 2.50448e-06 90" nodeId="291">
-                <Shape shapeId="65" name="stuetze" translation="0.0025003 0.0711982 -0.0386131" rotation="-28.2822 -0 0" nodeId="292" materialIds="15"/>
+                <Shape shapeId="65" name="stuetze" translation="0.0025003 0.0711982 -0.0386131" rotation="-28.2822 -0 0" nodeId="292" materialIds="15" castsShadows="true" receiveShadows="true"/>
               </TransformGroup>
             </Shape>
             <TransformGroup name="Decals" rotation="-6.83019e-06 -0 0" nodeId="293">
-              <Shape shapeId="66" name="LogoDecalLeft" translation="0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="294" materialIds="7"/>
-              <Shape shapeId="67" name="LogoDecalRight" translation="-0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="295" materialIds="7"/>
-              <Shape shapeId="68" name="ServiceDecalLeft" translation="0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="296" materialIds="16"/>
-              <Shape shapeId="69" name="ServiceDecalRight" translation="-0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="297" materialIds="16"/>
+              <Shape shapeId="66" name="LogoDecalLeft" translation="0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="294" materialIds="7" receiveShadows="true"/>
+              <Shape shapeId="67" name="LogoDecalRight" translation="-0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="295" materialIds="7" receiveShadows="true"/>
+              <Shape shapeId="68" name="ServiceDecalLeft" translation="0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="296" materialIds="16" receiveShadows="true"/>
+              <Shape shapeId="69" name="ServiceDecalRight" translation="-0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="297" materialIds="16" receiveShadows="true"/>
             </TransformGroup>
-            <Shape shapeId="70" name="Display1" translation="0.785701 1.56613 -0.668747" rotation="-6.83019e-06 -0 0" nodeId="298" materialIds="4"/>
+            <Shape shapeId="70" name="Display1" translation="0.785701 1.56613 -0.668747" rotation="-6.83019e-06 -0 0" nodeId="298" materialIds="4" receiveShadows="true"/>
             <TransformGroup name="HeckAchse" translation="0 1.77657 -2.50359" rotation="130 -0 0" nodeId="299">
               <Shape shapeId="71" name="Heckklappe" translation="0.00154238 -0.0937592 -0.039325" rotation="-6.83019e-06 -0 0" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="300" materialIds="4" castsShadows="true" receiveShadows="true">
                 <TransformGroup name="lightsBack" translation="-0.00154238 -1.68281 2.54291" rotation="-6.83019e-06 -0 0" nodeId="301">
