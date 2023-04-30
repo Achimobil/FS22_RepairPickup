@@ -6,25 +6,27 @@
   </Asset>
 
   <Files>
-    <File fileId="8" filename="textures/FarmerTools.dds"/>
-    <File fileId="10" filename="textures/ServiceLogo.dds"/>
+    <File fileId="9" filename="textures/FarmerTools.dds"/>
+    <File fileId="11" filename="textures/ServiceLogo.dds"/>
+    <File fileId="2" filename="textures/specular.dds"/>
     <File fileId="3" filename="$data/shaders/vehicleShader.xml"/>
-    <File fileId="9" filename="$data/vehicles/lizard/pickup2017/pickup2017_vmask.dds"/>
+    <File fileId="10" filename="$data/vehicles/lizard/pickup2017/pickup2017_vmask.dds"/>
   </Files>
 
 
   <Materials>
-    <Material name="Aufbau_mat" materialId="45" diffuseColor="0.231373 0.164706 0.8 1" specularColor="0.494118 1 0" customShaderId="3" customShaderVariation="colorMask">
+    <Material name="Aufbau_mat" materialId="151" diffuseColor="0.231373 0.164706 0.8 1" customShaderId="3" customShaderVariation="colorMask">
+      <Glossmap fileId="2"/>
       <CustomParameter name="colorMat0" value="0.5 0.5 0.5 1"/>
     </Material>
-    <Material name="logoDecal_mat" materialId="46" customShaderId="3" customShaderVariation="Decal">
-      <Texture fileId="8"/>
-      <Glossmap fileId="9"/>
+    <Material name="logoDecal_mat" materialId="152" customShaderId="3" customShaderVariation="Decal">
+      <Texture fileId="9"/>
+      <Glossmap fileId="10"/>
     </Material>
-    <Material name="Scharnier_mat" materialId="47" diffuseColor="0.8 0.0784314 0.654902 1" specularColor="0.494118 1 0" customShaderId="3" customShaderVariation="colorMask">
+    <Material name="Scharnier_mat" materialId="153" diffuseColor="0.8 0.0784314 0.654902 1" specularColor="0.494118 1 0" customShaderId="3" customShaderVariation="colorMask">
     </Material>
-    <Material name="ServiceDecal_mat" materialId="48" specularColor="0.494118 1 0" customShaderId="3" customShaderVariation="Decal">
-      <Texture fileId="10"/>
+    <Material name="ServiceDecal_mat" materialId="154" specularColor="0.494118 1 0" customShaderId="3" customShaderVariation="Decal">
+      <Texture fileId="11"/>
     </Material>
   </Materials>
 
@@ -37,40 +39,40 @@
   </Dynamics>
 
   <Scene>
-      <Shape shapeId="1" name="aufbau" rotation="-6.83019e-06 -0 0" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="59" materialIds="45" castsShadows="true" receiveShadows="true">
-        <Shape shapeId="2" name="Cylinder" translation="0 1.77657 -2.50359" rotation="-4.32571e-06 -2.50448e-06 -90" nodeId="60" materialIds="47">
-          <TransformGroup name="StuetzAchse" translation="0.0894027 0.651571 0.0173392" rotation="-4.32571e-06 2.50448e-06 90" nodeId="61">
-            <Shape shapeId="3" name="stuetze" translation="0.0025003 0.0711982 -0.0386131" rotation="-28.2822 -0 0" nodeId="62" materialIds="47"/>
+      <Shape shapeId="1" name="aufbau" rotation="-6.83019e-06 -0 0" nodeId="165" materialIds="151">
+        <Shape shapeId="2" name="Cylinder" translation="0 1.77657 -2.50359" rotation="-4.32571e-06 -2.50448e-06 -90" nodeId="166" materialIds="153">
+          <TransformGroup name="StuetzAchse" translation="0.0894027 0.651571 0.0173392" rotation="-4.32571e-06 2.50448e-06 90" nodeId="167">
+            <Shape shapeId="3" name="stuetze" translation="0.0025003 0.0711982 -0.0386131" rotation="-28.2822 -0 0" nodeId="168" materialIds="153"/>
           </TransformGroup>
         </Shape>
-        <TransformGroup name="Decals" rotation="-6.83019e-06 -0 0" nodeId="63">
-          <Shape shapeId="4" name="LogoDecalLeft" translation="0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="64" materialIds="46"/>
-          <Shape shapeId="5" name="LogoDecalRight" translation="-0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="65" materialIds="46"/>
-          <Shape shapeId="6" name="ServiceDecalLeft" translation="0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="66" materialIds="48"/>
-          <Shape shapeId="7" name="ServiceDecalRight" translation="-0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="67" materialIds="48"/>
+        <TransformGroup name="Decals" rotation="-6.83019e-06 -0 0" nodeId="169">
+          <Shape shapeId="4" name="LogoDecalLeft" translation="0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="170" materialIds="152"/>
+          <Shape shapeId="5" name="LogoDecalRight" translation="-0.001 0 0" rotation="90 -0 0" scale="0.01 0.01 0.01" nodeId="171" materialIds="152"/>
+          <Shape shapeId="6" name="ServiceDecalLeft" translation="0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="172" materialIds="154"/>
+          <Shape shapeId="7" name="ServiceDecalRight" translation="-0.001 0 0" rotation="-6.83019e-06 -0 0" nodeId="173" materialIds="154"/>
         </TransformGroup>
-        <Shape shapeId="8" name="Display1" translation="0.785701 1.56613 -0.668747" rotation="-6.83019e-06 -0 0" nodeId="68" materialIds="45"/>
-        <TransformGroup name="HeckAchse" translation="0 1.77657 -2.50359" rotation="130 -0 0" nodeId="69">
-          <Shape shapeId="9" name="Heckklappe" translation="0.00154238 -0.0937592 -0.039325" rotation="-6.83019e-06 -0 0" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="70" materialIds="45" castsShadows="true" receiveShadows="true">
-            <TransformGroup name="lightsBack" translation="-0.00154238 -1.68281 2.54291" rotation="-6.83019e-06 -0 0" nodeId="71">
-              <TransformGroup name="sharedLights.001" rotation="-6.83019e-06 -0 0" nodeId="72">
-                <TransformGroup name="backLightLeft" translation="0.407071 1.40683 -2.50609" rotation="-90 -180 2.50448e-06" nodeId="73">
-                  <Light name="backLightLeft1" rotation="5.80505e-06 105 -90" nodeId="74" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="15" coneAngle="90" dropOff="3.282"/>
+        <Shape shapeId="8" name="Display1" translation="0.785701 1.56613 -0.668747" rotation="-6.83019e-06 -0 0" nodeId="174" materialIds="151"/>
+        <TransformGroup name="HeckAchse" translation="0 1.77657 -2.50359" rotation="130 -0 0" nodeId="175">
+          <Shape shapeId="9" name="Heckklappe" translation="0.00154238 -0.0937592 -0.039325" rotation="-6.83019e-06 -0 0" compoundChild="true" collisionMask="2109442" density="0.0001" nodeId="176" materialIds="151" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="lightsBack" translation="-0.00154238 -1.68281 2.54291" rotation="-6.83019e-06 -0 0" nodeId="177">
+              <TransformGroup name="sharedLights.001" rotation="-6.83019e-06 -0 0" nodeId="178">
+                <TransformGroup name="backLightLeft" translation="0.407071 1.40683 -2.50609" rotation="-90 -180 2.50448e-06" nodeId="179">
+                  <Light name="backLightLeft1" rotation="5.80505e-06 105 -90" nodeId="180" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="15" coneAngle="90" dropOff="3.282"/>
                 </TransformGroup>
-                <TransformGroup name="backLightRight" translation="-0.397702 1.40683 -2.50609" rotation="-90 180 -2.50448e-06" nodeId="75">
-                  <Light name="backLightRight1" rotation="2.51582e-05 105 -90" nodeId="76" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="15" coneAngle="90" dropOff="3.282"/>
+                <TransformGroup name="backLightRight" translation="-0.397702 1.40683 -2.50609" rotation="-90 180 -2.50448e-06" nodeId="181">
+                  <Light name="backLightRight1" rotation="2.51582e-05 105 -90" nodeId="182" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="15" coneAngle="90" dropOff="3.282"/>
                 </TransformGroup>
               </TransformGroup>
             </TransformGroup>
           </Shape>
         </TransformGroup>
-        <TransformGroup name="lights" rotation="-6.83019e-06 -0 0" nodeId="77">
-          <TransformGroup name="sharedLights" rotation="-6.83019e-06 -0 0" nodeId="78">
-            <TransformGroup name="innerLightLeft" translation="0.657071 1.50683 -1.591" rotation="-90 90 0" nodeId="79">
-              <Light name="innerLightLeft1" translation="0 -1.25546e-15 -2.87215e-08" rotation="-6.83019e-06 80 -90" nodeId="80" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="145" dropOff="5"/>
+        <TransformGroup name="lights" rotation="-6.83019e-06 -0 0" nodeId="183">
+          <TransformGroup name="sharedLights" rotation="-6.83019e-06 -0 0" nodeId="184">
+            <TransformGroup name="innerLightLeft" translation="0.657071 1.50683 -1.591" rotation="-90 90 0" nodeId="185">
+              <Light name="innerLightLeft1" translation="0 -1.25546e-15 -2.87215e-08" rotation="-6.83019e-06 80 -90" nodeId="186" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="145" dropOff="5"/>
             </TransformGroup>
-            <TransformGroup name="innerLightRight" translation="-0.647702 1.50683 -1.591" rotation="-90 -90 0" nodeId="81">
-              <Light name="innerLightRight1" translation="0 -1.19209e-07 2.13523e-08" rotation="1.26015e-05 80 -90" nodeId="82" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="145" dropOff="5"/>
+            <TransformGroup name="innerLightRight" translation="-0.647702 1.50683 -1.591" rotation="-90 -90 0" nodeId="187">
+              <Light name="innerLightRight1" translation="0 -1.19209e-07 2.13523e-08" rotation="1.26015e-05 80 -90" nodeId="188" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.005" depthMapSlopeScaleBias="0.005" depthMapSlopeClamp="0.02" depthMapResolution="512" shadowFarDistance="80" shadowExtrusionDistance="200" pcssLightSize="50" pcssLightDistance="50" pcssDepthBiasFactor="1" pcssMaxPenumbraSize="1" shadowPerspective="false" range="2" coneAngle="145" dropOff="5"/>
             </TransformGroup>
           </TransformGroup>
         </TransformGroup>
