@@ -6,7 +6,7 @@ Date: 14.02.2022
 Version: 1.1.4.3
 
 Contact/Help/Tutorials:
-discord.gg/gHmnFZAypk
+https://github.com/braeven/FS22_A_ProductionRevamp
 
 Changelog:
 1.0.0.0 @ 16.04.2022 - Release Initial Version
