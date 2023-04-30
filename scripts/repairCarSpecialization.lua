@@ -7,8 +7,8 @@ Author: Achimobil
 Date: 10.04.2023
 Version: 0.2.0.0
 
-Contact/Help/Tutorials:
-https://www.achimobil.de/ls-19-22-modding/
+Project Site:
+https://github.com/Achimobil/FS22_RepairPickup
 
 EN Rules:
 This script is allowed to copy unchanged in your mod and use it there.
