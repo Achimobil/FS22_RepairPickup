@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="73">
+<modDesc descVersion="74">
 	<author>Achimobil</author>
-	<version>0.3.1.0</version>
+	<version>1.0.0.0</version>
 	<title>
 		<de>Feld Reparatur Pickup</de>
 		<en>Field Repair Pickup</en>
@@ -40,7 +40,7 @@ Price 45.000 $
 
 ]]></en>
 	</description>
-	<iconFilename>icon.png</iconFilename>
+	<iconFilename>icon_FieldRepairPickup.png</iconFilename>
 	<multiplayer supported="true"/>
 	<storeItems>
 		<storeItem xmlFilename="pickup2017.xml"/>
